@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+.bar{
+    background-color: #F999B7;
+    padding: 0 20px;    
+}
+.menu{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;       
+    padding: 5px 0;
+    justify-content: center;/*el logo esta en el centro, si se necesita poner las guias le pones space-between*/    
+}
+.menu .logo img{
+    width: 80px;    
+}
+.menu__bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu .menu__bar a{
+    padding: 0 18px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+nav .menu__bar a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 1.8px;
+    background: #fff;
+    transition: .4s;
+}
+nav .menu__bar a:hover::after{    
+    width: 100%;    
+}
+nav .menu__bar a:hover{
+    color: #fff;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    color: #fff;
+    background-image: linear-gradient(0deg, rgba(0,0,0,.32), rgba(0,0,0,.32)), url("img/hero.jpg");/*ya le puse pero ahora se lo quito?*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;     
+}
+.hero .texto{
+    user-select: none;
+}
+.hero h2{
+    display: inline;
+    font-size: 15vw;
+}
+.hero p{
+    font-size: 3.2vw;
+    margin-bottom: 100px;
+}
+.hero a{
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #cf524a;
+    font-size: 2em;
+    border-radius: 50px;
+    transition-timing-function: linear;
+    transition-duration: .2s;
+}
+.hero a:hover{
+    filter: brightness(135%);
+}
+#quienes-somos .container{
+    display: flex;    
+    justify-content: center;   
+    text-align: center;
+    padding: 50px 30px;      
+    background-color: /*#F999B7*/#ed6c76;
+}
+#quienes-somos .texto{ 
+    padding-left: 30px;
+    width: 50%;   
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    text-align: initial;
+}
+#quienes-somos .img-container{
+    background-image: url("img/pastelera.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+    width: 40vw;        
+}
+#quienes-somos .container .texto{
+    color: #fff;
+}
+#quienes-somos .container h2{
+    text-align: center;
+    font-size: 10vw;
+    margin-bottom: 30px;
+}
+#quienes-somos .container p{
+    text-align: center;
+    font-size: 2vw;
+}
+#comentarios{
+    background-color: #df9297;
+}
+.comentarios{
+    max-width: 1200px;
+    text-align: center;      
+    background-position: center;         
+}
+.h1{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 6vw;  
+    padding: 40px 0;  
+}
+.container-testimonials{
+    display: flex;    
+    justify-content: center;
+}
+.testimonial{
+    width: 340px;
+    margin: 15px 10px;
+    background: #ed6c7793/*#cf524a*/;
+    padding: 30px 10px;
+    text-align: center;
+    border-radius: 10px;   
+    user-select: none;
+    transition: all .25s linear;
+}
+.testimonial:hover{
+    transform: scale(1.05);
+    /*box-shadow: 0 12px 25px #000;*/
+}
+.testimonial .calificacion{
+    display: flex;    
+    justify-content: center;
+}
+.testimonial .calificacion img{
+    height: 32px;    
+}
+.photo-perfil1, .photo-perfil2, .photo-perfil3{
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    top: -60px;    
+}
+/*fotos del perfil*/
+.photo-perfil1{
+    background-image: url("img/c1.jpg");
+    background-position: center -10px;
+}
+.photo-perfil2{
+    background-image: url("img/c2.jpg");
+    background-size: 160px;
+    background-position: -20px 0px;
+}
+.photo-perfil3{
+    background-image: url("img/c3.jpg");
+    background-size: 250px;
+    background-position: -78px -20px;
+}
+.testimonial{
+    margin-bottom: 40px;
+}
+.testimonial h2{
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 40px;    
+}
+.testimonial p{
+    margin-top: 8px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-weight: 100;    
+    font-family: 'Roboto', sans-serif;
+}
+.nav{
+    position: fixed;
+    bottom: 85px;
+    right: 85px;
+    z-index: 10000;
+}
+.options > div{
+    z-index: 10;
+    transition: all .4s linear;
+}
+.check, .openButtom, .options > div{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    background-color: #865d6c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.check, .openButtom, .options > div:hover{
+    background-color:#f3d1ac;
+}
+div i{
+    color: #ffffff;
+    font-size: 24px;
+}
+.openButtom{
+    transform: rotate(0deg);
+    transition: transform 450ms linear;
+    z-index: 20;
+    background-color: #eeb781;
+}
+.check{
+    opacity: 0;
+    z-index: 30;
+}
+.check:checked ~ .openButtom ~ .options > div:first-child{
+    margin-top: -210px;
+}
+.check:checked ~ .openButtom ~ .options > div:nth-child(even){
+    margin-top: -140px;
+}
+.check:checked ~ .openButtom ~ .options > div:last-child{
+    margin-top: -70px;
+}
+.check:checked ~ .openButtom{
+    transform: rotate(180deg);
+    background-color: #f0c191;/*color*/
+}
+#productos{
+    background-color: #ed6c76;
+}
+.contenedor .texto{
+    padding: 20px;
+    color: rgb(255, 255, 255);    
+}
+.contenedor .texto h1{
+    font-size: 3.5em;
+    line-height: 80px;
+    text-align: center;
+}
+.contenedor .texto p{
+    font-size: 1.2em;
+    text-align: center;
+}
+.grid-container{  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-auto-rows: minmax(200px, auto);   
+    gap: 15px;
+    padding: 20px;
+    grid-auto-flow: dense;
+    margin: auto auto;
+    max-width: 1000px;
+}
+.grid-item{
+    display: flex;    
+    border: 2px solid #fff;
+    background-repeat: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+    transition: transform .2s linear;
+}
+.grid-item:hover{
+    transform: scale(1.05);
+}
+footer{   
+    background-color: #cf524a;
+}
+footer p{
+    margin: 0;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    user-select: none;
+}
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/*RESPONSIVE DESIGN*/
+@media (max-width: 830px){
+    .hero a{
+        font-size: 20px;
+    }
+    #quienes-somos .img-container{
+        display: none;
+    }
+    #quienes-somos .texto{
+        text-align: center;
+        padding: 100px 0;        
+    }
+    #quienes-somos .container h2{
+        font-size: 20vw;
+    }
+    #quienes-somos .container p{
+        font-size: 3.2vw;
+    }
+    .container-testimonials{
+        display: flex; 
+        flex-direction: column;   
+        justify-content: center;        
+    }
+    .testimonial{
+        width: 340px;
+        margin: 15px 10px;
+        padding: 30px 10px;
+        text-align: center;
+        border-radius: 10px;   
+        user-select: none;
+        transition: all .25s linear;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .testimonial:last-child{
+        display: none;
+    }
+    .grid-item:last-child{
+        display: none;
+    }
+}
+@media (max-width: 600px){
+    .hero h2{
+        font-size: 15vw;
+        margin-bottom: 2px;
+    }
+    .hero p{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .hero a{
+        position: relative;
+        top: -30px;
+        font-size: 20px;
+    }
+    #quienes-somos .container h2{
+        font-size: 100px;
+    }
+    #quienes-somos .container p{
+        font-size: 20px;
+    }
+}
